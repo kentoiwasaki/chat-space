@@ -1,0 +1,41 @@
+= render "side-contents"
+
+.main-contents
+  .header
+    .header__left-box
+      .header__left-box__title
+        sample
+      .header__left-box__member
+        Members : seo neko
+    .header__edit
+      =link_to "", class: ".header__edit__btn" do
+        Edit
+  .chat
+    .messages
+      .message
+        .message__upper
+          .message__upper__name
+            seo
+          .message__upper__time
+            2016/09/21 06:16:55
+        .message__text  
+          Hello world!
+      .message
+        .message__upper
+          .message__upper__name
+            neko
+          .message__upper__time
+            2016/09/22 06:16:55
+        .message__text  
+          Good bye world!
+
+  .footer
+    %form.form
+      %div.form__input-box
+        %input.form__input-box__textarea{:name => "message", :placeholder => "type a message", :type => "text"}/
+        %label.form__input-box__upload-label{for: "upload-icon"}
+          %i.fa.fa-picture-o
+          %input.form__input-box__upload-label__image{:name => "image", :type => "file", :id => "upload-icon"}/
+      %input.form__send-btn{:type => "submit", :value => "SEND"}/
+
+
