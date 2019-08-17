@@ -2,11 +2,11 @@
   .account
     .account__box
       .account__box__username
-        seo
+        = current_user.name
       .account__box__menu
         =link_to "", class: "account__box__menu__edit" do
           = fa_icon 'edit'
-        =link_to "", class: "account__box__menu__setting" do
+        =link_to edit_user_path(current_user), class: "account__box__menu__setting" do
           = fa_icon 'cog'
   .detail
     .detail__group
