@@ -1,0 +1,123 @@
+@import "./variable";
+
+* {
+  box-sizing: border-box;
+}
+
+.main-contents {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: right;
+} 
+
+.header {
+  height: 96px;
+  width: calc(100vw - 300px);
+  position: fixed;
+  border-bottom: solid 1px #eeeeee; 
+  background-color: white;
+  padding: 0 40px;
+  display: flex;
+  &__left-box {
+    &__title {
+      font-size: 20px;
+      color: #333333;
+      padding: 35px 0 15px;
+    }
+    &__member {
+      font-size: 12px;
+      color: #999999;
+      bottom: 0;
+    }
+  }
+  &__edit {
+    height: 40px;
+    line-height: 40px;
+    color: lightblue;
+    border: solid 1px lightblue;
+    margin:   28px 0 0 auto;
+    padding: 0 20px 0 20px;
+  }
+}
+
+.chat {
+  height: 100vh;
+  padding-top: 96px;
+  padding-bottom: 82px;
+  background-color: #fafafa;
+  overflow: scroll;
+}
+
+.messages {
+  padding: 46px 40px;
+}
+
+.message {
+  padding-bottom: 40px;
+  &__upper {
+    display: flex;
+    &__name {
+      font-size: 16px;
+      color: $message-font-color;
+      font-weight: bold;
+    }
+    &__time {
+      padding-left: 10px;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  &__text {
+    padding-top: 10px;
+    font-size: 14px;
+    color: $message-font-color;
+  }
+}
+
+.footer {
+  width: calc(100vw - 300px);
+  height: 82px;
+  bottom: 0;
+  position: fixed;
+  background-color: lightgray;
+  padding: 16px 40px;
+}
+
+.form {
+  display: flex;
+  &__input-box {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    &__textarea {
+      width: 100%;
+      height: 50px;
+      padding-left: 10px;
+      font-size: 16px;
+      color: $message-font-color;
+    }
+    &__upload-label{
+      position: absolute;
+      right: 10px;
+      line-height: 50px;
+      cursor: pointer;
+      font-size: 1.3rem; 
+      &__image {
+        display: none;
+      }
+    }
+  }
+  &__send-btn {
+    height: 50px;
+    line-height: 50px;
+    background-color: #38aef0;
+    color: white;
+    padding: 0 30px;
+    margin-left: 15px;
+  }
+}
+
+
+
+
