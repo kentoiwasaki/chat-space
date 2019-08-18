@@ -10,7 +10,9 @@
           = fa_icon 'cog'
   .detail
     .detail__group
-      .detail__group__name
-        sample
-      .detail__group__comment
-        Good bye world!
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .detail__group__name
+            = group.name 
+          .detail__group__comment
+            メッセージはまだありません
