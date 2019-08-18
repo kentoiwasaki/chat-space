@@ -4,13 +4,15 @@
       .account__box__username
         = current_user.name
       .account__box__menu
-        =link_to "", class: "account__box__menu__edit" do
-          = fa_icon 'edit'
+        =link_to new_group_path, class: "account__box__menu__edit" do
+          = fa_icon 'pencil-square-o'
         =link_to edit_user_path(current_user), class: "account__box__menu__setting" do
           = fa_icon 'cog'
   .detail
     .detail__group
-      .detail__group__name
-        sample
-      .detail__group__comment
-        Good bye world!
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .detail__group__name
+            = group.name 
+          .detail__group__comment
+            メッセージはまだありません
