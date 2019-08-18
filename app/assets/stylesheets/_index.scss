@@ -74,41 +74,36 @@
   }
 }
 
-.footer {
+.form {
   width: calc(100vw - 300px);
   height: 82px;
   bottom: 0;
   position: fixed;
   background-color: lightgray;
   padding: 16px 40px;
-}
-
-.form {
-  display: flex;
-  &__input-box {
+  right: 0;
+  &__message {
     height: 50px;
     width: 100%;
     display: flex;
     position: relative;
-    &__textarea {
-      width: 100%;
-      height: 50px;
-      padding-left: 10px;
-      font-size: 16px;
-      color: $message-font-color;
-    }
-    &__upload-label{
+    padding-left: 10px;
+    font-size: 16px;
+    color: $message-font-color;
+    padding-right: 40px;
+  }
+  &__mask {
+    position: absolute;
+    position: relative;
+    &__image {
       position: absolute;
       right: 10px;
       line-height: 50px;
       cursor: pointer;
       font-size: 1.3rem; 
-      &__image {
-        display: none;
-      }
     }
   }
-  &__send-btn {
+  &__submit {
     height: 50px;
     line-height: 50px;
     background-color: #38aef0;
@@ -118,6 +113,11 @@
   }
 }
 
+.new_message {
+  display: flex;
+  position: relative;
+}
 
-
-
+.hidden {
+  display: none;
+}
