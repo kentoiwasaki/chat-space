@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(message){
+    var image = message.image == null ? "" : `<img src="${message.image}">` 
     var html = `<div class="message">
                   <div class="message__upper">
                     <div class="message__upper__name">
@@ -13,26 +14,7 @@ $(function(){
                     <p class="lower-message__content">
                       ${message.body}
                     </p>
-                  </div>
-                </div>`
-    return html;
-  }
-
-  function buildImage(message){
-    var html = `<div class="message">
-                  <div class="message__upper">
-                    <div class="message__upper__name">
-                      ${message.name}
-                    </div>
-                    <div class="message__upper__time">
-                      ${message.time}
-                    </div>
-                  </div>
-                  <div class="message__text">
-                    <p class="lower-message__content">
-                      ${message.body}
-                    </p>
-                    <img src="${message.image}">
+                    ${image}
                   </div>
                 </div>`
     return html;
@@ -51,7 +33,7 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      message.image == null ? html = buildHTML(message) : html = buildImage(message);
+      var html = buildHTML(message);
       $('.messages').append(html);
       $('.new_message')[0].reset();
       $('.chat').animate({ scrollTop: $('.chat')[0].scrollHeight });
