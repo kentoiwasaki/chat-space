@@ -51,14 +51,15 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      if (message.image == null) {
-        var html = buildHTML(message);
-      }
-      else {
-        var html = buildImage(message);
-      }
+      message.image == null ? html = buildHTML(message) : html = buildImage(message);
+      // if (message.image == null) {
+      //   var html = buildHTML(message);
+      // }
+      // else {
+      //   var html = buildImage(message);
+      // }
       $('.messages').append(html);
-      $('.form__message').val('');
+      $('.new_message')[0].reset();
       $('.chat').animate({ scrollTop: $('.chat')[0].scrollHeight });
       $('.form__submit').attr('disabled', false);
     })
