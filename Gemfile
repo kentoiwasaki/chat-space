@@ -82,3 +82,5 @@ group :development, :test do
   gem 'faker'
   gem 'spring'
 end
+
+gem 'jquery-rails'
