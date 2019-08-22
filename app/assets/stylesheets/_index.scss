@@ -41,9 +41,9 @@
 }
 
 .chat {
-  height: 100vh;
-  padding-top: 96px;
-  padding-bottom: 82px;
+  height: calc(100vh - 96px - 82px);
+  margin-top: 96px;
+  margin-bottom: 82px;
   background-color: #fafafa;
   overflow: scroll;
 }
