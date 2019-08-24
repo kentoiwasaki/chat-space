@@ -11,7 +11,7 @@
   .detail
     .detail__group
       - current_user.groups.each do |group|
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), class: "group-link" do
           .detail__group__name
             = group.name 
           .detail__group__comment
