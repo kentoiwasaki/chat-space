@@ -40,6 +40,10 @@
   }
 }
 
+a.header__edit__btn:visited {
+  color: lightblue;
+}
+
 .chat {
   height: calc(100vh - 96px - 82px);
   margin-top: 96px;
@@ -121,3 +125,4 @@
 .hidden {
   display: none;
 }
+
