@@ -1,20 +1,18 @@
 @import "./variable";
 
 .side-contents {
-  height: 100vh;
+  box-sizing: border-box;
   width: 300px;
   color: $side-content-font-color;
-  float: left;
-  position: fixed;
 }
 
 .account {
   height: 96px;
+  line-height: 96px;
+  width: 300px;
   background-color: #253141;
   padding: 0 20px;
   &__box {
-    width: 100%;
-    line-height: 96px;
     display: flex;
     &__username {
       font-size: 16px;
@@ -29,8 +27,9 @@
 
 .detail {
   background-color: #2f3e51;
-  height: 100vh;
+  height: calc(100vh - 96px);
   padding: 0 20px;
+  overflow: scroll;
   &__group {
     font-weight: bold;
     color: white;
@@ -52,4 +51,5 @@ a.account__box__menu__edit:visited,
 a.account__box__menu__setting,
 a.account__box__menu__setting:visited {
   color:white;
+  text-decoration: none;
 }

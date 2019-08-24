@@ -4,16 +4,17 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  display: flex;
+}
+
 .main-contents {
-  height: 100vh;
   width: calc(100vw - 300px);
-  float: right;
 } 
 
 .header {
   height: 96px;
   width: calc(100vw - 300px);
-  position: fixed;
   border-bottom: solid 1px #eeeeee; 
   background-color: white;
   padding: 0 40px;
@@ -33,8 +34,8 @@
   &__edit {
     height: 40px;
     line-height: 40px;
-    color: lightblue;
-    border: solid 1px lightblue;
+    color: #38aef0;
+    border: solid 1px #38aef0;
     margin:   28px 0 0 auto;
     padding: 0 20px 0 20px;
   }
@@ -46,8 +47,6 @@ a.header__edit__btn:visited {
 
 .chat {
   height: calc(100vh - 96px - 82px);
-  margin-top: 96px;
-  margin-bottom: 82px;
   background-color: #fafafa;
   overflow: scroll;
 }
@@ -124,5 +123,11 @@ a.header__edit__btn:visited {
 
 .hidden {
   display: none;
+}
+
+a.header__edit__btn,
+a.header__edit__btn:visited {
+  color: #38aef0;
+  text-decoration: none;
 }
 
