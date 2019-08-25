@@ -67,13 +67,13 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'devise'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'compass-rails'
   gem 'sprockets'
   gem 'kaminari'
-  gem 'devise'
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
