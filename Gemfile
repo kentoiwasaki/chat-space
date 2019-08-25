@@ -68,6 +68,7 @@ gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'pry-rails'
