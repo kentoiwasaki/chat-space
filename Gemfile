@@ -59,14 +59,12 @@ group :test do
      gem 'rspec'
 end
 
-group :production do 
-     gem 'unicorn'
+group :production do
+  gem 'unicorn'
 end
 
 gem 'haml-rails'
-
 gem "font-awesome-rails"
-
 gem 'carrierwave'
 gem 'mini_magick'
 
@@ -82,5 +80,3 @@ group :development, :test do
   gem 'faker'
   gem 'spring'
 end
-
-gem 'jquery-rails'
