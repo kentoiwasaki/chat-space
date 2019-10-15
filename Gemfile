@@ -67,7 +67,7 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'fog-aws'
 
 group :development, :test do
