@@ -1,67 +1,29 @@
-# README
+# アプリケーションURL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+http://3.114.17.88/
 
-Things you may want to cover:
+ログイン用サンプルユーザー
+* email : sample@example.com
+* password : sample
 
-* Ruby version
+# アプリケーションの概要
 
-* System dependencies
+ユーザー間でのチャットを可能にするアプリケーションです。
 
-* Configuration
+# アプリケーションの機能一覧
 
-* Database creation
+* ユーザー登録機能
+* ユーザー情報編集機能
+* チャットグループ作成機能
+* チャットグループ編集機能
+* チャットグループメンバーのインクリメンタルサーチ機能
+* チャットの非同期投稿機能(テキスト・画像)
+* チャットの非同期更新機能
 
-* Database initialization
+# アプリケーション内で使用している技術一覧
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-# chat-space DB設計
-
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
-|password|string|null: false|
-### Association
-- has_many :groups_users
-- has_many :groups, through: :group_users
-- has_many :messages
-
-## groupsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-### Association
-- has_many :messages
-- has_many :groups_users
-- has_many :users, through: :group_users
-
-## messagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|body|text|
-|image|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :group
-
-## groups_usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :group
-- belongs_to :user
+* 言語 : Ruby
+* フレームワーク : Ruby on Rails
+* データベース : MySQL
+* 画像アップロード : Carrierwave
+* サーバー : AWS
