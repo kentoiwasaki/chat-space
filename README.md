@@ -3,7 +3,7 @@
 http://3.114.17.88/
 
 ログイン用サンプルユーザー
-* email : sample@example.com
+* email : sample@gmail.com
 * password : sample
 
 # アプリケーションの概要
