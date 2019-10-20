@@ -24,6 +24,7 @@ http://3.114.17.88/
 
 * 言語 : Ruby
 * フレームワーク : Ruby on Rails
+* フロントエンド : HTML5/CSS3/JavaScript/jQuery
 * データベース : MySQL
-* 画像アップロード : Carrierwave
+* 画像アップロード : Carrierwave/S3
 * サーバー : AWS
